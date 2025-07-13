@@ -326,8 +326,7 @@ export default function RachelCookiePortfolio() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <Badge className="bg-amber-100 text-amber-800 hover:bg-amber-200">🍪 Food Technology Student</Badge>
-
+                {/* Removed Badge "Food Technology Student" */}
                 <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
                   Hi, I'm
                   <span className="block bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
