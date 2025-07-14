@@ -189,15 +189,15 @@ body {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr; /* Default to single column */
+  grid-template-columns: 1fr; /* Always single column after image removal */
   gap: 3rem; /* gap-12 */
   align-items: center;
 }
 
+/* No need for lg:grid-cols-2 anymore as the image column is removed */
 @media (min-width: 1024px) {
-  /* lg */
   .hero-content {
-    grid-template-columns: 1fr 1fr; /* lg:grid-cols-2 */
+    grid-template-columns: 1fr; /* Ensure it remains single column */
   }
 }
 
@@ -346,56 +346,6 @@ body {
 .stat-label {
   font-size: 0.875rem; /* text-sm */
   color: var(--text-light); /* text-gray-600 */
-}
-
-.hero-image {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-circle {
-  position: relative;
-  z-index: 10;
-  width: 24rem; /* w-96 */
-  height: 24rem; /* h-96 */
-  margin-left: auto;
-  margin-right: auto;
-  background: linear-gradient(to bottom right, #fcd34d, #fed7aa); /* from-amber-200 to-orange-200 */
-  border-radius: var(--border-radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
-}
-
-.inner-circle {
-  width: 20rem; /* w-80 */
-  height: 20rem; /* h-80 */
-  background: linear-gradient(to bottom right, #fbbf24, #f97316); /* from-amber-400 to-orange-400 */
-  border-radius: var(--border-radius-full);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--bg-white);
-}
-
-.inner-circle i {
-  height: 6rem; /* h-24 */
-  width: 6rem; /* w-24 */
-  margin-bottom: 1rem; /* mb-4 */
-}
-
-.inner-circle h3 {
-  font-size: 1.5rem; /* text-2xl */
-  font-weight: 700; /* font-bold */
-}
-
-.inner-circle p {
-  font-size: 1.125rem; /* text-lg */
 }
 
 /* Section General Styles */
